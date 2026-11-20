@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="claro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onde Vivemos — ArteHub</title>
+<meta name="description" content="Conheça os lugares onde as integrantes do ArteHub vivem: Nova Santa Rosa, Alto Santa Fé, Toledo e Maripá.">
+<script>(function(){var t='claro';try{var s=localStorage.getItem('temaArteHub');if(s==='escuro'||s==='claro'){t=s;}}catch(e){}document.documentElement.setAttribute('data-theme',t);})();</script>
+<style>
+:root{
+  --bg:#f1f7f6; --surface:#ffffff; --surface2:#e6f1f0; --text:#1d2c2c; --muted:#4d6463;
+  --primary:#2b5d6f; --on-primary:#ffffff; --accent:#7dbaba; --accent2:#70b6b3;
+  --border:#d3e3e2; --shadow:0 4px 14px rgba(43,93,111,.12); --header:#ffffff;
+  --note:#fff6df; --note-border:#e5cf94; --note-text:#5b4a1a;
+}
+html[data-theme="escuro"]{
+  --bg:#0b1818; --surface:#132727; --surface2:#1a3434; --text:#e5f1f0; --muted:#a8c5c3;
+  --primary:#7dbaba; --on-primary:#0b1818; --accent:#70b6b3; --accent2:#2b5d6f;
+  --border:#264545; --shadow:0 4px 14px rgba(0,0,0,.4); --header:#0f2020;
+  --note:#2a2814; --note-border:#6b5f2a; --note-text:#eadfae;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:17px;overflow-x:hidden;transition:background .25s,color .25s}
+img{max-width:100%;display:block}
+a{color:var(--primary)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;color:var(--primary);margin:0 0 .6em}
+h1{font-size:clamp(2rem,5vw,3rem)} h2{font-size:clamp(1.5rem,3.5vw,2rem)} h3{font-size:1.25rem}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{width:min(1100px,92%);margin:0 auto}
+.narrow{width:min(760px,92%);margin:0 auto}
+
+/* cabeçalho */
+.site-header{position:sticky;top:0;z-index:50;background:var(--header);border-bottom:3px solid var(--accent);box-shadow:var(--shadow)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Georgia,serif;font-weight:bold;font-size:1.5rem;color:var(--primary)}
+.logo{width:36px;height:36px;border-radius:50% 50% 50% 8px;background:linear-gradient(135deg,#7dbaba,#2b5d6f);color:#fff;display:grid;place-items:center;font-size:1.2rem}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav a.link{text-decoration:none;color:var(--text);padding:8px 12px;border-radius:999px;font-weight:bold;font-size:.95rem;transition:background .2s}
+.nav a.link:hover{background:var(--surface2)}
+.nav a.link[aria-current="page"]{background:var(--primary);color:var(--on-primary)}
+.tools{display:flex;align-items:center;gap:8px;margin-left:8px}
+.langs{display:flex;border:2px solid var(--accent);border-radius:999px;overflow:hidden}
+.langs a{padding:5px 10px;text-decoration:none;font-size:.85rem;font-weight:bold;color:var(--text)}
+.langs a:hover{background:var(--surface2)}
+.langs a[aria-current="true"]{background:var(--accent);color:#0b1818}
+.btn,button.btn{display:inline-block;background:var(--primary);color:var(--on-primary);border:0;border-radius:999px;padding:10px 20px;font:bold .95rem Arial,sans-serif;text-decoration:none;cursor:pointer;transition:transform .2s,opacity .2s}
+.btn:hover{transform:translateY(-2px);opacity:.92}
+.btn.outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+#themeBtn{background:var(--surface2);color:var(--text);border:2px solid var(--accent);padding:6px 12px;font-size:.85rem}
+.menu-btn{display:none;background:var(--primary);color:var(--on-primary);border:0;border-radius:10px;padding:8px 14px;font:bold .95rem Arial,sans-serif;cursor:pointer}
+
+/* seções */
+main{animation:entrar .5s ease both}
+@keyframes entrar{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.section{padding:44px 0}
+.section.alt{background:var(--surface2)}
+.hero{padding:46px 0 36px;background:linear-gradient(160deg,var(--surface2),var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.hero .slogan{font-family:Georgia,serif;font-size:1.4rem;color:var(--muted);font-style:italic;margin-bottom:.8em}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.hero-img{border-radius:20px;overflow:hidden;border:4px solid var(--surface);box-shadow:var(--shadow);transform:rotate(1.5deg)}
+.hero-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.page-title{padding:38px 0 20px;background:linear-gradient(160deg,var(--surface2),var(--bg));border-bottom:1px solid var(--border)}
+.page-title p{max-width:720px;color:var(--muted);font-size:1.1rem;margin:0}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.card h3{margin-bottom:.4em}
+.card .place{color:var(--muted);font-size:.92rem;font-weight:bold;margin-bottom:.6em}
+.card p:last-child{margin-bottom:0}
+.card .more{font-weight:bold;display:inline-block;margin-top:6px}
+.avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--primary));color:#fff;display:grid;place-items:center;font:bold 1.5rem Georgia,serif;margin-bottom:10px}
+.text-block{max-width:780px}
+.text-block.center{margin-left:auto;margin-right:auto}
+.quote{border-left:5px solid var(--accent);background:var(--surface);padding:16px 20px;border-radius:0 14px 14px 0;margin:18px 0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0}
+.chip{background:var(--surface);border:2px solid var(--accent);color:var(--text);padding:6px 14px;border-radius:999px;text-decoration:none;font-weight:bold;font-size:.9rem}
+.chip:hover{background:var(--accent);color:#0b1818}
+.facts{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0 20px}
+.fact{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:10px 16px}
+.fact b{display:block;color:var(--primary);font-size:.85rem}
+ul.list{padding-left:0;list-style:none;margin:0 0 1em}
+ul.list li{position:relative;padding:6px 0 6px 28px}
+ul.list li::before{content:"";position:absolute;left:4px;top:15px;width:12px;height:12px;border-radius:50% 50% 50% 2px;background:var(--accent)}
+.note{background:var(--note);border:1px solid var(--note-border);color:var(--note-text);border-radius:14px;padding:14px 18px;font-size:.95rem;margin-top:16px}
+.ufo{background:linear-gradient(160deg,#10243b,#0b1818 70%);color:#e5f1f0;border-radius:24px;padding:34px;border:2px solid var(--accent);position:relative;overflow:hidden}
+.ufo h2,.ufo h3{color:#9fd8d6}
+.ufo::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(125,186,186,.35),transparent 70%)}
+.ufo .note{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#e5f1f0}
+.badge{display:inline-block;font-size:.8rem;font-weight:bold;padding:3px 12px;border-radius:999px;margin-bottom:10px}
+.badge.direct{background:var(--primary);color:var(--on-primary)}
+.badge.indirect{background:var(--surface2);color:var(--text);border:1px solid var(--accent)}
+.example{background:var(--surface2);border-radius:12px;padding:10px 14px;margin-top:12px;font-size:.95rem}
+.example b{color:var(--primary)}
+
+/* imagens */
+.photo{border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:var(--surface)}
+.photo img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.photo.group{max-width:860px;margin:0 auto}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--border);transition:transform .25s}
+.gallery img:hover{transform:scale(1.03)}
+
+/* carrossel */
+.carousel{position:relative}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:6px 2px 14px;-webkit-overflow-scrolling:touch}
+.track figure{flex:0 0 min(340px,78%);margin:0;scroll-snap-align:start}
+.track img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;border:1px solid var(--border)}
+.car-ctrl{display:flex;justify-content:center;gap:12px;margin-top:8px}
+.car-btn{width:46px;height:46px;border-radius:50%;border:0;background:var(--primary);color:var(--on-primary);font-size:1.5rem;cursor:pointer;line-height:1}
+.car-btn:hover{opacity:.9}
+
+/* crônica */
+.cronica{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:clamp(22px,5vw,48px);box-shadow:var(--shadow)}
+.cronica h3.titulo{font-size:clamp(1.7rem,4vw,2.3rem);text-align:center;margin-bottom:1em}
+.cronica p{font-family:Georgia,serif;font-size:1.1rem;line-height:1.85;max-width:680px;margin-left:auto;margin-right:auto;text-indent:1.5em}
+
+/* vídeo */
+.video-box{max-width:820px}
+.video{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;box-shadow:var(--shadow);border:3px solid var(--surface)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-box h3{margin-bottom:.1em}
+.video-box .sub{color:var(--muted);margin-bottom:12px}
+.video-soon{max-width:820px;border:3px dashed var(--accent);border-radius:18px;padding:26px;text-align:center;color:var(--muted);margin-top:28px;background:var(--surface)}
+.video-soon h3{margin-bottom:.2em}
+
+/* rodapé */
+.site-footer{background:var(--primary);color:var(--on-primary);padding:30px 0;margin-top:20px}
+.site-footer a{color:var(--on-primary)}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+.foot p{margin:0}
+
+@media (max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(2,1fr)}
+  .hero .wrap{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:820px){
+  .menu-btn{display:block}
+  .nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding:8px 0 12px}
+  .nav.open{display:flex}
+  .nav a.link{text-align:center}
+  .tools{margin:6px 0 0;justify-content:center;flex-wrap:wrap}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .section{padding:32px 0}
+  .ufo{padding:22px}
+  .gallery{grid-template-columns:1fr 1fr;gap:10px}
+  .cronica p{text-indent:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="site-header" id="topo"><div class="wrap bar"><a class="brand" href="index.html" aria-label="ArteHub"><span class="logo" aria-hidden="true">A</span>ArteHub</a><button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">☰ Menu</button><nav class="nav" id="nav" aria-label="Menu"><a class="link" href="index.html">Início</a><a class="link" href="sobre-nos.html">Sobre Nós</a><a class="link" href="onde-vivemos.html" aria-current="page">Onde Vivemos</a><a class="link" href="tcts.html">TCTs</a><div class="tools"><div class="langs" role="group" aria-label="Idioma"><a href="onde-vivemos.html" hreflang="pt" lang="pt" title="Português" aria-current="true">PT</a><a href="en/onde-vivemos.html" hreflang="en" lang="en" title="English">EN</a><a href="esp/onde-vivemos.html" hreflang="es" lang="es" title="Español">ES</a></div><button class="btn" id="themeBtn" type="button" data-light="Modo claro" data-dark="Modo escuro"></button></div></nav></div></header>
+<main>
+
+<section class="page-title"><div class="wrap"><h1>Onde vivemos</h1><p>Cada integrante do grupo vive em um lugar diferente do Paraná. Aqui mostramos um pouco de cada um deles, com suas comunidades, festas e tradições.</p><div class="chips"><a class="chip" href="#alto-santa-fe">Alto Santa Fé e Nova Santa Rosa</a><a class="chip" href="#cultura-alema">Cultura alemã</a><a class="chip" href="#ovnis">Relatos de OVNIs</a><a class="chip" href="#toledo">Toledo</a><a class="chip" href="#maripa">Maripá</a><a class="chip" href="#diversidade">Entre comunidades</a></div></div></section>
+
+<section class="section" id="alto-santa-fe"><div class="wrap">
+  <h2>Milena e Fabiely — Alto Santa Fé e Nova Santa Rosa</h2>
+  <p class="text-block">Esta é a parte mais especial desta página, porque Alto Santa Fé é o lugar onde a Milena sempre viveu e onde mora atualmente. Como Alto Santa Fé pertence ao município de Nova Santa Rosa, vamos começar por ele.</p>
+
+  <div class="card" style="margin:20px 0">
+    <h3>Nova Santa Rosa</h3>
+    <div class="facts"><div class="fact"><b>Localização</b>Paraná, Brasil</div><div class="fact"><b>População aproximada</b>8 mil habitantes (informação utilizada no projeto)</div></div>
+    <p>Nova Santa Rosa é um município do interior do Paraná. É um lugar de comunidade forte, com características rurais e tradições que passam de geração em geração.</p><p>Uma marca importante da região é a influência da imigração alemã, que aparece nos costumes, nas festas e no jeito de a comunidade se organizar.</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Alto Santa Fé</h3>
+      <p>Alto Santa Fé é uma pequena vila, um distrito que pertence ao município de Nova Santa Rosa, no Paraná. Ela não é um município independente.</p><p>A Milena mora no interior de Alto Santa Fé, onde sempre viveu. A estimativa usada no nosso projeto é de aproximadamente mil moradores.</p>
+      <div class="note">Atenção: esse número é apenas uma estimativa feita pelo grupo, e não um dado oficial.</div>
+    </div>
+    <div class="card">
+      <h3>Como é a comunidade</h3>
+      <ul class="list"><li>Comunidade pequena e rural</li><li>Agricultura presente no cotidiano</li><li>Tradição alemã</li><li>Igreja Católica</li><li>Clube Social União</li><li>Festas comunitárias e bailes</li><li>Oktoberfest</li><li>Grupo de dança alemã</li><li>Bonecas utilizadas em leilões</li><li>Personagens Friz e Frida</li><li>Festa da igreja, realizada em julho</li><li>A história da própria comunidade</li></ul>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card"><h3>A igreja e a comunidade</h3><p>A comunidade possui uma igreja católica, que completou 67 anos no ano mencionado no nosso projeto original.</p><p>Em julho é realizada a festa da igreja, um momento em que a comunidade se reúne.</p></div>
+    <div class="card"><h3>Escola</h3><p>A escola local oferece ensino até o 9º ano. Para cursar o ensino médio, os estudantes precisam procurar outras localidades.</p></div>
+  </div>
+</div></section>
+
+<section class="section alt" id="cultura-alema"><div class="wrap">
+  <h2>A cultura alemã em Alto Santa Fé</h2>
+  <div class="text-block"><p>A tradição alemã é uma das características mais marcantes da comunidade. Ela aparece principalmente nas festas, nos bailes e nas danças.</p><p>A Oktoberfest é uma das festas mais conhecidas, e a comunidade também tem um grupo de dança alemã que mantém viva essa tradição. Os bailes e as festas comunitárias, como as que envolvem o Clube Social União, também fazem parte dessa tradição.</p><p>Entre as curiosidades estão as bonecas utilizadas em leilões e os personagens Friz e Frida, que fazem parte desse universo de festas e tradições da comunidade.</p><p>Para nós, tudo isso mostra como uma cultura que veio de longe continua viva e se mistura com a vida do interior paranaense.</p></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="ufo" id="ovnis">
+    <h2>Relatos de OVNIs na região</h2>
+    <p>Uma das curiosidades que mais chamam a atenção da Milena são os relatos de OVNIs, ou objetos voadores não identificados, na região de Alto Santa Fé.</p><p>Essas histórias fazem parte das conversas e das curiosidades da comunidade. Elas despertam interesse e ajudam a mostrar como cada lugar tem as suas próprias narrativas.</p>
+    <div class="note">Importante: são relatos e curiosidades contadas pela comunidade. Não são acontecimentos comprovados cientificamente, e não citamos nomes, datas ou testemunhas.</div>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:0"><div class="wrap">
+  <div class="card"><h3>Fabiely — Nova Santa Rosa</h3><p>A Fabiely mora em Nova Santa Rosa, no Paraná, e conhece de perto a vida da região.</p><p>Sua experiência ajuda o grupo a perceber como a cultura de Nova Santa Rosa, marcada pela vida no interior, pela influência alemã e pela união da comunidade, aparece no dia a dia.</p></div>
+</div></section>
+
+<section class="section alt" id="toledo"><div class="wrap">
+  <h2>Yasmin — Toledo</h2>
+  <div class="grid g2">
+    <div class="text-block"><p>A Yasmin mora em Toledo, um município do oeste do Paraná. Toledo tem características urbanas e reúne pessoas de diferentes origens, o que se reflete na variedade de costumes, comidas e eventos da cidade.</p><p>Em uma cidade maior, a diversidade aparece nas ruas, nas escolas e nos encontros do dia a dia, e cada pessoa traz um pouco da sua história.</p></div>
+    <div class="card"><h3>O que destacamos</h3><ul class="list"><li>Características urbanas</li><li>Cultura</li><li>Gastronomia</li><li>Eventos</li><li>Tradições</li><li>Diversidade de pessoas e costumes</li></ul></div>
+  </div>
+</div></section>
+
+<section class="section" id="maripa"><div class="wrap">
+  <h2>Paolla — Maripá</h2>
+  <div class="grid g2">
+    <div class="text-block"><p>A Paolla mora em Maripá, um município do Paraná. É uma cidade de porte menor, onde a vida comunitária e a ligação com o interior fazem parte do cotidiano.</p><p>Como todo lugar, Maripá tem a sua cultura local, suas tradições e suas festas, que ajudam a formar a identidade de quem vive ali.</p></div>
+    <div class="card"><h3>O que destacamos</h3><ul class="list"><li>Características da cidade</li><li>Cultura local</li><li>Tradições</li><li>Comunidade</li><li>Festas</li><li>Relação com o interior</li></ul></div>
+  </div>
+</div></section>
+
+<section class="section alt" id="diversidade"><div class="wrap">
+  <h2>Diversidade cultural entre as comunidades</h2>
+  <div class="text-block"><p>Mesmo morando em lugares diferentes, nós quatro vivemos em comunidades do mesmo estado, e ainda assim cada uma tem seus costumes, suas festas e seu jeito de ser.</p><p>Quando compartilhamos essas experiências, percebemos que as diferenças não nos afastam. Elas nos ensinam algo novo. Um sotaque, uma festa ou uma tradição de família podem parecer pequenos detalhes, mas contam a história de um povo.</p><p>É isso que o ArteHub quer mostrar: pessoas de localidades diferentes podem trocar experiências, aprender umas com as outras e valorizar o que cada lugar tem de único.</p></div>
+</div></section>
+
+</main>
+<footer class="site-footer"><div class="wrap foot"><p><b>ArteHub</b> — Projeto escolar sobre arte, multiculturalismo e diversidade cultural.</p><p><a href="index.html">Voltar à página inicial</a> · <a href="#topo">Voltar ao topo</a></p></div></footer>
+<script>
+(function(){
+  var root=document.documentElement;
+  var btn=document.getElementById('themeBtn');
+  function atualizar(){
+    var escuro=root.getAttribute('data-theme')==='escuro';
+    btn.textContent=escuro?('\u2600 '+btn.getAttribute('data-light')):('\u263E '+btn.getAttribute('data-dark'));
+    btn.setAttribute('aria-pressed',escuro?'true':'false');
+  }
+  btn.addEventListener('click',function(){
+    var novo=root.getAttribute('data-theme')==='escuro'?'claro':'escuro';
+    root.setAttribute('data-theme',novo);
+    try{localStorage.setItem('temaArteHub',novo);}catch(e){}
+    atualizar();
+  });
+  window.addEventListener('storage',function(e){
+    if(e.key==='temaArteHub'&&(e.newValue==='claro'||e.newValue==='escuro')){root.setAttribute('data-theme',e.newValue);atualizar();}
+  });
+  atualizar();
+
+  var mb=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  mb.addEventListener('click',function(){
+    var aberto=nav.classList.toggle('open');
+    mb.setAttribute('aria-expanded',aberto?'true':'false');
+  });
+
+  var track=document.getElementById('track');
+  if(track){
+    var passo=function(){return Math.max(track.clientWidth*0.8,200);};
+    document.getElementById('prevBtn').addEventListener('click',function(){track.scrollBy({left:-passo(),behavior:'smooth'});});
+    document.getElementById('nextBtn').addEventListener('click',function(){track.scrollBy({left:passo(),behavior:'smooth'});});
+  }
+})();
+</script>
+</body>
+</html>
